@@ -1,0 +1,15 @@
+{
+  "name": "PingrisAlexis_03_25012021",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass -w scss -o css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
