@@ -1,0 +1,45 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family-text);
+  color: var(--text-a);
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--text-a);
+  text-decoration: none;
+}
+
+h2 {
+  padding: 2rem;
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+span {
+  font-weight: 300;
+}
+
+
+hr{
+  width: 4.5rem;
+  height: 0.3rem;
+  background-color: var(--tertiary);
+  border-color:var(--tertiary);
+  border-style: none;
+}
+
+li{
+ list-style: none;
+}
