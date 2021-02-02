@@ -52,28 +52,7 @@ main {
     h3 {
       font-size: 1.8rem;
       font-weight: 300;
-    }
-    button {
-      height: 5rem;
-      width: 20rem;
-      background: var(--pink-purple);
-      border-radius: 3rem;
-      color: var(--text-b);
-      text-decoration: none;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 1.5rem;
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
-      transform: scale(1);
-      transition-property: transform;
-      transition-duration: 0.4s; 
-      &:hover {
-      transform: scale(1.1);
-      }
-     }
+    }   
   }
   .functionning-contenair {
     h2 {
@@ -111,14 +90,13 @@ main {
       i {
         font-size: 2rem;
       }  
-    .block:hover {
-      box-shadow: 0.1 -0.5rem 0.5rem #d8d8d8;
-    }
     li:hover {
       background: var(--primary-light);
-      transition: 0.2s;
+      transition: 0.4s;
+    
       i {
         color: var(--primary);
+        transition: 0.4s;
       }
     }
     .circle {
@@ -165,10 +143,8 @@ main {
       .heart-card {
         position: relative;
         bottom: 3.5rem;
-        font-size: 3rem;
         border: 0rem;
-        font-size: 3.5rem;
-        right: -88%;
+        right: -95%;
       }
 
       figure {
@@ -268,6 +244,11 @@ footer {
       margin-left:5rem;
       cursor: pointer;
     }
+  }
+  .btn-order{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
   }
 }
 .menu-contenair{
