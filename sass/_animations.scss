@@ -1,0 +1,28 @@
+.functionning-blocks {
+  li:hover {
+    background: var(--primary-light);
+    transition: 0.2s;
+  }
+}
+
+/*heart fonteawesome*/
+.heart{
+font-size:3rem;
+display:flex;
+justify-content: center;
+align-items: center;
+width: 0;
+    :nth-child(2){
+    position: relative;
+    left:-3rem;
+    background: -webkit-gradient(linear, left top, left  bottom , from( #9356dc), to( #ff79da));
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  :nth-child(2):hover{
+    opacity: 1;
+    transition: 0.4s;
+    transform: scale(1.1)
+  }
+}

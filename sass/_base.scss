@@ -1,0 +1,61 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family-text);
+  color: var(--text-a);
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--text-a);
+  text-decoration: none;
+}
+
+h2 {
+  padding: 2rem;
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+span {
+  font-weight: 300;
+}
+
+
+hr{
+  width: 4.5rem;
+  height: 0.3rem;
+  background-color: var(--tertiary);
+  border-color:var(--tertiary);
+  border-style: none;
+}
+
+li{
+ list-style: none;
+}
+
+button {
+  height: 5rem;
+  width: 20rem;
+  background: var(--pink-purple);
+  border-radius: 3rem;
+  color: var(--text-b);
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+ }
