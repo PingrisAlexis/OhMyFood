@@ -50,6 +50,22 @@ li {
   list-style: none;
 }
 
+button {
+  height: 5rem;
+  width: 20rem;
+  background: var(--pink-purple);
+  border-radius: 3rem;
+  color: var(--text-b);
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 body {
   --font-family-text: "Roboto", sans-serif;
   --font-family-title: "Shrikhand", cursive;
@@ -74,32 +90,33 @@ body {
 /*heart fonteawesome*/
 .heart {
   font-size: 3rem;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0;
 }
 
-.heart .fa-heart-border {
-  font-size: 2.9rem;
-  opacity: 1;
-}
-
-.heart .fa-heart-gradient {
+.heart :nth-child(2) {
   position: relative;
-  left: -3.1rem;
+  left: -3rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 
-.heart .fa-heart-border:hover {
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.heart .fa-heart-gradient:hover {
+.heart :nth-child(2):hover {
   opacity: 1;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /*index.html*/
@@ -172,35 +189,6 @@ main .teaser h3 {
   font-weight: 300;
 }
 
-main .teaser button {
-  height: 5rem;
-  width: 20rem;
-  background: var(--pink-purple);
-  border-radius: 3rem;
-  color: var(--text-b);
-  text-decoration: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-main .teaser button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 main .functionning-contenair h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -259,19 +247,16 @@ main .functionning-contenair i {
   font-size: 2rem;
 }
 
-main .functionning-contenair .block:hover {
-  -webkit-box-shadow: 0.1 -0.5rem 0.5rem #d8d8d8;
-          box-shadow: 0.1 -0.5rem 0.5rem #d8d8d8;
-}
-
 main .functionning-contenair li:hover {
   background: var(--primary-light);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 main .functionning-contenair li:hover i {
   color: var(--primary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 main .functionning-contenair .circle {
@@ -325,10 +310,8 @@ main .restaurants-contenair .restaurants-cards {
 main .restaurants-contenair .restaurants-cards .heart-card {
   position: relative;
   bottom: 3.5rem;
-  font-size: 3rem;
   border: 0rem;
-  font-size: 3.5rem;
-  right: -88%;
+  right: -95%;
 }
 
 main .restaurants-contenair .restaurants-cards figure {
@@ -460,6 +443,16 @@ footer section li:hover {
 .restaurants-mid-page h2 .heart {
   margin-left: 5rem;
   cursor: pointer;
+}
+
+.restaurants-mid-page .btn-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .menu-contenair {

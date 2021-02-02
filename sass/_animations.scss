@@ -8,26 +8,21 @@
 /*heart fonteawesome*/
 .heart{
 font-size:3rem;
-  display: inline-block;
-  .fa-heart-border{
-    font-size: 2.9rem;
-    opacity:1;
-  }
-	.fa-heart-gradient{
+display:flex;
+justify-content: center;
+align-items: center;
+width: 0;
+    :nth-child(2){
     position: relative;
-    left:-3.1rem;
-    
+    left:-3rem;
     background: -webkit-gradient(linear, left top, left  bottom , from( #9356dc), to( #ff79da));
   	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
   }
-  .fa-heart-border:hover{
-    color:transparent;
-    -webkit-text-fill-color: transparent;
-  }
-  .fa-heart-gradient:hover{
+  :nth-child(2):hover{
     opacity: 1;
     transition: 0.4s;
+    transform: scale(1.1)
   }
 }
