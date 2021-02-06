@@ -1,152 +1,864 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+/*General*/
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
 
 body {
   font-family: var(--font-family-text);
   color: var(--text-a);
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+}
 
 p {
-  margin: 1rem 0; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1rem 0 2rem 0; }
-
-ul {
-  list-style: none; }
+  margin: 1rem 0;
+}
 
 a {
   color: var(--text-a);
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-:root {
+h2 {
+  padding: 2rem;
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+span {
+  font-weight: 300;
+}
+
+li {
+  list-style: none;
+}
+
+/*menu underline*/
+hr {
+  width: 4.5rem;
+  height: 0.3rem;
+  background-color: var(--tertiary);
+  border-color: var(--tertiary);
+  border-style: none;
+}
+
+/*button order, button explore*/
+button {
+  height: 5rem;
+  width: 20rem;
+  background: var(--pink-purple);
+  border-radius: 3rem;
+  color: var(--text-b);
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+/*"new" stickers*/
+.new-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  width: 8rem;
+  height: 3rem;
+  background: var(--tertiary);
+  text-align: center;
+  color: #269b7e;
+  border-radius: 0.5rem;
+  position: relative;
+  bottom: 25.5rem;
+  right: -75%;
+}
+
+.new-block span {
+  font-weight: bold;
+}
+
+body {
   --font-family-text: "Roboto", sans-serif;
   --font-family-title: "Shrikhand", cursive;
   --primary: #9356dc;
+  --primary-light: #eed8fd;
   --secondary: #ff79da;
-  --tertiary: #99e2d0;
+  --tertiary: #99E2D0;
   --text-a: #333;
   --text-b: #ffffff;
   --background: #f2f2f2;
   --grey-crocodile: #e5e5e5;
-  --shadow: 0 -0.5rem 0.5rem #d8d8d8; }
+  --shadow: 0 -0.5rem 0.5rem #d8d8d8;
+  --shadowBlock: 0.3rem 0.3rem 0.3rem #d8d8d8;
+  --pink-purple: -webkit-gradient(linear, left top, left  bottom , from(#ff79da), to( #9356dc));
+}
 
-header {
+.functionning-blocks .blocks:hover {
+  background: var(--primary-light);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.functionning-blocks .blocks:hover i {
+  color: var(--primary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/*heart fonteawesome*/
+.heart {
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0;
+}
+
+.heart :nth-child(2) {
+  position: relative;
+  left: -3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.heart :nth-child(2):hover {
+  opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
+
+/*menus apparition*/
+@-webkit-keyframes menus-apparition {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    visibility: visible;
+  }
+}
+@keyframes menus-apparition {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    visibility: visible;
+  }
+}
+
+/*button order, button explore*/
+button:hover {
+  opacity: 0.9;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-box-shadow: 0 -0.5rem 0.5rem #bababa;
+          box-shadow: 0 -0.5rem 0.5rem #bababa;
+}
+
+/*check list menu*/
+@-webkit-keyframes check-circle-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes check-circle-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes check-contenair-load {
+  from {
+    width: 0rem;
+  }
+  to {
+    width: 10rem;
+  }
+}
+
+@keyframes check-contenair-load {
+  from {
+    width: 0rem;
+  }
+  to {
+    width: 10rem;
+  }
+}
+
+/*footer*/
+footer li:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 640px) {
+  .new-block {
+    right: -81%;
+  }
+}
+
+/*loader*/
+.loader-contenair {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: wait;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader-contenair .loader {
+  position: relative;
+  top: 46%;
+  height: 2rem;
+  margin-top: -1rem;
+  width: 15rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.loader-contenair .loader .bullets {
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.loader-contenair .loader :first-child {
+  background: var(--primary);
+}
+
+.loader-contenair .loader :nth-child(2) {
+  background: var(--secondary);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.loader-contenair .loader :nth-child(3) {
+  background: var(--tertiary);
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes loading {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+.restaurants-top-page nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 2.6rem;
+}
+
+.restaurants-top-page nav a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.restaurants-top-page .teaser-picture {
+  min-height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.restaurants-mid-page {
+  background: var(--background);
+  border-radius: 2rem 2rem 0 0;
+  max-width: 140rem;
+  margin: auto;
+  margin-top: 38vh;
+}
+
+.restaurants-mid-page .mid-page-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.restaurants-mid-page .mid-page-title .heart {
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+.restaurants-mid-page .mid-page-title h2 {
+  font-family: var(--font-family-title);
+  font-weight: 300;
+  border-radius: 3rem 3rem;
+}
+
+.restaurants-mid-page .btn-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.menu-contenair {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: var(--background);
+}
+
+.menu-contenair .entrances-contenair,
+.menu-contenair .dishes-contenair,
+.menu-contenair .desserts-contenair {
+  visibility: hidden;
+  -webkit-animation-name: menus-apparition;
+          animation-name: menus-apparition;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu-contenair .dishes-contenair {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.menu-contenair .desserts-contenair {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu-contenair h3 {
+  font-weight: 300;
+}
+
+.menu-contenair ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-bottom: 5rem;
+}
+
+.menu-contenair ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: nowrap;
+      flex-flow: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  border-radius: 2rem;
+  margin: 2rem 0rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  width: 32rem;
+  height: 7rem;
+}
+
+.menu-contenair ul a .fa-check-circle {
+  display: none;
+}
+
+.menu-contenair ul a .food-price {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.menu-contenair ul a .food-blocks {
+  height: 7rem;
+  width: 32rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  background: #fff;
+}
+
+.menu-contenair ul a .food-blocks h4 {
+  font-size: 1.5rem;
+}
+
+.menu-contenair ul a .food-blocks h4 .food-info {
+  font-size: 1.4rem;
+}
+
+.menu-contenair ul a:hover {
+  overflow: hidden;
+}
+
+.menu-contenair ul a:hover .food-blocks, .menu-contenair ul a:hover h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu-contenair ul a:hover .check-contenair {
+  background-color: var(--tertiary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10rem;
+  -webkit-animation-name: check-contenair-load;
+          animation-name: check-contenair-load;
+  animation-direction: normal, reverse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  overflow: hidden;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+.menu-contenair ul a:hover .fa-check-circle {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--tertiary);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  -webkit-animation-name: check-circle-rotate;
+          animation-name: check-circle-rotate;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  animation-direction: normal, reverse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  background: transparent;
+}
+
+/*index.html*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 150px; }
-  header h1 {
-    padding: 2rem;
-    text-align: center;
-    margin: 0; }
-    header h1 img {
-      padding-top: 1rem;
-      width: 20rem; }
-  header .where {
-    padding: 2rem;
-    font-size: 2rem;
-    height: 8rem;
-    background: #e5e5e5;
-    font-weight: 700;
-    box-shadow: var(--shadow); }
-    header .where i {
-      margin-right: 1rem; }
+  height: 150px;
+}
+
+header h1 {
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+header h1 img {
+  padding-top: 1rem;
+  width: 20rem;
+}
+
+header .where {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background: #e5e5e5;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+header .where .fa-map-marker-alt {
+  font-size: 3rem;
+  padding-right: 1rem;
+}
+
+header .where span {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
 
 main .teaser {
-  height: 240px;
+  min-height: 250px;
+  width: 100%;
   padding-top: 3rem;
   text-align: center;
-  background: var(--background); }
-  main .teaser h2 {
-    font-weight: 900; }
-  main .teaser h3 {
-    font-weight: 300; }
-  main .teaser button {
-    height: 5rem;
-    width: 20rem;
-    background: linear-gradient(var(--secondary) 5%, var(--primary));
-    border-radius: 3rem;
-    color: var(--text-b);
-    text-decoration: none;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-top: 1.5rem; }
+  background: var(--background);
+}
 
-main .functionning-contenair {
+main .teaser h2 {
+  font-weight: 900;
+}
+
+main .teaser h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+main .functionning-contenair h2 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+main .functionning-contenair .functionning-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
-  align-items: center;
-  padding-bottom: 2rem; }
-  main .functionning-contenair h2 {
-    position: relative;
-    left: -7rem; }
-  main .functionning-contenair .block {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: var(--background);
-    margin-bottom: 2rem;
-    width: 30rem;
-    height: 6rem;
-    border: none;
-    border-radius: 3rem;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: var(--shadow); }
-    main .functionning-contenair .block h3 {
-      padding-left: 3rem;
-      margin: 0; }
-    main .functionning-contenair .block i {
-      padding-left: 1.5rem;
-      font-size: 2rem; }
-  main .functionning-contenair .circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
-    background: var(--primary);
-    color: var(--text-b);
-    position: relative;
-    left: -1rem;
-    vertical-align: center;
-    font-size: 2.2rem; }
-  main .functionning-contenair .choose h3 {
-    padding-left: rem; }
-  main .functionning-contenair .compose h3 {
-    padding-left: rem; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0rem 2rem;
+}
+
+main .functionning-contenair .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--background);
+  margin-bottom: 2rem;
+  min-width: 33rem;
+  height: 6rem;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+main .functionning-contenair h3, main .functionning-contenair i {
+  padding-left: 2.5rem;
+}
+
+main .functionning-contenair i {
+  font-size: 2rem;
+}
+
+main .functionning-contenair .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: var(--text-b);
+  position: relative;
+  left: -1rem;
+  vertical-align: center;
+  font-size: 2.2rem;
+}
+
+main .functionning-contenair .choose h3 {
+  margin-left: 1rem;
+}
+
+main .functionning-contenair .compose h3 {
+  margin-left: 0.4rem;
+}
+
+main .functionning-contenair .taste h3 {
+  padding-right: 0.3rem;
+}
 
 main .restaurants-contenair {
+  background: var(--background);
+  height: auto;
+  padding-bottom: 50px;
+}
+
+main .restaurants-contenair h2 {
+  text-align: center;
+}
+
+main .restaurants-contenair .restaurants-cards {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--background); }
-  main .restaurants-contenair h2 {
-    position: relative;
-    left: -9rem; }
-  main .restaurants-contenair figure {
-    width: 30rem;
-    height: 25rem;
-    border-radius: 2rem;
-    border: 0.1rem solid; }
-    main .restaurants-contenair figure img {
-      width: 30rem;
-      height: 18rem;
-      border-radius: 2rem 2rem 0 0;
-      object-fit: cover; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .restaurants-contenair .restaurants-cards .heart-card {
+  position: relative;
+  bottom: 3.5rem;
+  border: 0rem;
+  right: -95%;
+}
+
+main .restaurants-contenair .restaurants-cards figure {
+  overflow: hidden;
+  max-width: 60rem;
+  max-height: 25rem;
+  border-radius: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: white;
+  margin: 2rem 2rem;
+  -webkit-box-shadow: var(--shadowBlock);
+          box-shadow: var(--shadowBlock);
+}
+
+main .restaurants-contenair .restaurants-cards figure img {
+  width: 100%;
+  height: 18rem;
+  border-radius: 2rem 2rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .restaurants-contenair .restaurants-cards figure h4 {
+  padding-top: 1rem;
+}
+
+main .restaurants-contenair .restaurants-cards figure span {
+  display: block;
+}
+
+main .restaurants-contenair .restaurants-cards figure span, main .restaurants-contenair .restaurants-cards figure h4 {
+  margin-left: 2rem;
+}
+
+footer {
+  background: #333;
+  color: var(--text-b);
+  height: 200px;
+  width: 100%;
+}
+
+footer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  text-align: start;
+  margin-left: 10%;
+  padding: 0;
+}
+
+footer section h4 {
+  padding: 2rem  0rem;
+  font-family: var(--font-family-title);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+footer section li {
+  padding-left: 0rem;
+  cursor: pointer;
+  margin: 1rem 0rem;
+  padding-right: 0rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+footer section li i {
+  margin-right: 1rem;
+}
+
+footer section li a {
+  color: var(--text-b);
+}
+/*# sourceMappingURL=style.css.map */
