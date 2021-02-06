@@ -1,0 +1,76 @@
+/*loader*/
+
+.loader-contenair{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: wait;
+    animation-name: loading;
+    animation-duration:2.5s;
+    animation-fill-mode: forwards;
+    
+  .loader{
+    position: relative;
+    top:46%;
+    height: 2rem;
+    margin-top:-1rem;
+    width: 15rem;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    
+    .bullets{      
+        margin: auto;
+        width: 2rem;
+        height: 2rem;
+        border-radius:50%;
+        animation-name: bounce;
+        animation-duration:0.8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+  
+    :first-child{       
+        background: var(--primary);
+    }
+        
+    :nth-child(2){
+        background: var(--secondary);
+        animation-delay: 0.2s;
+    }
+  
+    :nth-child(3){
+        background: var(--tertiary);
+        animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes bounce {
+  
+  from {
+      transform: translateY(0);
+   
+  }
+  
+  to {
+      transform: translateY(-2rem); 
+  }
+}
+  
+  
+@keyframes loading{
+  
+  0% {
+        visibility: visible;
+  }
+  
+  100% {
+        visibility: hidden;
+  }
+}
