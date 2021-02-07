@@ -4,37 +4,37 @@
 
 ### Specifications:
 
-- The website must be responsive.
+- The website must be responsive and mobile first.
 
 - The website must be compatible with the latest versions of Chrome and Firefox.
 
-- Integration must be done in HTML5 & CSS3, without framework.
+- The development will have to be done in CSS, without JavaScript.
 
-- Each accommodation or activity card must be clickable in its entirety. For the moment the links will be empty.
+- No framework should be used, however the use of SASS would be a more.
 
-- In the menu, the links "Accommodations" and "Activities" are anchors that should lead to the sections of the page.
 
-- The filters will not be functional for this version, however, they must change their appearance on hovering.
 
-- Even if no mock-up for the tablet resolution is provided, the integration must support it.
+- Even if no mock-ups for the tablet resolution and the desktop resolution are provided, the integration must support it.
 
 ### Elements provided:
 
-- The font is "Raleway".
+- The font for the text is "Roboto", for the logo and the title the font is "Shrikhand".
 
 - The icons comes from Fonte Awesome.
 
-- The colours used are: blue #0065FC; light blue #DEEBFF; grey #F2F2F2.
+- The colours used are: purple #9356DC; pink #FF79DA; green #99E2D0.
 
-- All images are also delivered in sm, md, l & xl format.
+- All images are also delivered in xl format.
 
-- Home mock-up:
+- A briefing i
 
-![Reservia desktop mock-up](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/src/mock-ups/Accueil.png)
+- Home mock-up (mobile resolution):
 
-- Restaurants mock-up:
+![Ohmyfood! Home mock-up (mobile resolution)](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/src/mock-ups/Accueil.png)
 
-![Reservia mobile mock-up](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/src/mock-ups/Menu%20-%20La%20note%20enchant%C3%A9e.png)
+- Restaurants mock-up (mobile resolution):
+
+![Ohmyfood! Restaurants  mock-up (mobile resolution)](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/src/mock-ups/Menu%20-%20La%20note%20enchant%C3%A9e.png)
 
 ### Skills assessed:
 
@@ -42,5 +42,4 @@
 
 - Implement advanced graphical CSS effects.
 
-- nsuring the graphic coherence of a website.
-
+- Ensuring the graphic coherence of a website.
