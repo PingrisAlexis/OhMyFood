@@ -12,7 +12,7 @@
 
 - No framework should be used, however the use of SASS would be a more.
 
-
+- The effects that can be accessed by clicking or hovering are visible on the model. They must use CSS animations or transitions, no JavaScript or libraries.
 
 - Even if no mock-ups for the tablet resolution and the desktop resolution are provided, the integration must support it.
 
@@ -26,7 +26,7 @@
 
 - All images are also delivered in xl format.
 
-- A briefing i
+- A briefing is include with specifications.
 
 - Home mock-up (mobile resolution):
 
