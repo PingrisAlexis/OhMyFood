@@ -12,6 +12,7 @@
         justify-content: flex-end;
       }
     }
+
     .teaser-picture{
       min-height: 50vh;
       width: 100%;
@@ -19,6 +20,7 @@
       z-index: -1;
     }
   }
+
   .restaurants-mid-page{
     background: var(--background);
     border-radius: 2rem 2rem 0 0;
@@ -89,29 +91,37 @@
       margin: auto;
       flex-grow: 1;
       padding-bottom: 5rem;
+      
   
         a{
-        display: flex;
-        flex-flow: nowrap;
-        justify-content:space-between;
-        background: #fff;
-        border-radius: 2rem;
-        margin:2rem 0rem;
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-        width: 32rem;
-        height: 7rem;
-
-          .fa-check-circle{
-            display: none;
-          }
+          transition-property: width;
+          transition-duration: 2s;
+          display: flex;
+          flex-flow: nowrap;
+          justify-content:space-between;
+          background: #fff;
+          border-radius: 2rem;
+          margin:2rem 0rem;
+          padding-left: 2rem;
+          margin-bottom: 2rem;
+          width: 32rem;
+          height: 7rem;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+ 
 
           .food-price{
             align-self: center;
             font-weight: bold;
             padding-right: 1rem;         
           }
-  
+
+          .food-blocks, h4{      
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+
           .food-blocks{
             height: 7rem;
             width: 32rem;
@@ -122,8 +132,7 @@
             align-items: center;
             border-radius: 2rem;
             background: #fff;
-            
-            
+                      
             h4{
               font-size: 1.5rem;
 
@@ -132,45 +141,37 @@
             }
           }                           
         }
-      }
-  
-      a:hover{
-        overflow: hidden;
 
-      .food-blocks, h4{      
-        text-overflow:ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        }
-       
-        .check-contenair{      
-          background-color: var(--tertiary);
+        .check-contenair{
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 10rem;
-          animation-name: check-contenair-load;
-          animation-direction:  normal, reverse;
-          animation-timing-function: linear;
-          overflow: hidden;
-          animation-duration: 0.4s;
+          width: 0rem;
+          background-color: var(--tertiary);
+          height: 7rem;
+          transition: width 0.6s;
+        }
+
+        .fa-check-circle{
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          justify-content: center;
+          transition:transform 0.6s;  
+          font-size: 2rem;       
+          color: #fff;
+        }
+      }
+  
+      a:hover{
+       
+        .check-contenair{  
+          width: 10rem;            
         }  
-          .fa-check-circle{
-            font-size: 2rem;
-            display: flex;
-            background-color: var(--tertiary);
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            overflow: hidden;
-            animation-name: check-circle-rotate;
-            animation-duration: 0.4s;
-            animation-direction:  normal, reverse;
-            animation-timing-function: linear;
-            background:transparent;
-          }
-        
-      
+
+        .fa-check-circle{
+          transform: rotate(360deg);
+        }           
       }
     }
   }
