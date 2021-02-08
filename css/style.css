@@ -43,7 +43,7 @@ li {
   list-style: none;
 }
 
-/*menu underline*/
+/*menus underline*/
 hr {
   width: 4.5rem;
   height: 0.3rem;
@@ -71,8 +71,16 @@ button {
           box-shadow: var(--shadow);
 }
 
+button:hover {
+  opacity: 0.9;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-box-shadow: 0 0.5rem  0.5rem #bababa;
+          box-shadow: 0 0.5rem  0.5rem #bababa;
+}
+
 /*"new" stickers*/
-.new-block {
+.new-sticker {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,36 +102,8 @@ button {
   right: -75%;
 }
 
-.new-block span {
+.new-sticker span {
   font-weight: bold;
-}
-
-body {
-  --font-family-text: "Roboto", sans-serif;
-  --font-family-title: "Shrikhand", cursive;
-  --primary: #9356dc;
-  --primary-light: #eed8fd;
-  --secondary: #ff79da;
-  --tertiary: #99E2D0;
-  --text-a: #333;
-  --text-b: #ffffff;
-  --background: #f2f2f2;
-  --grey-crocodile: #e5e5e5;
-  --shadow: 0 -0.5rem 0.5rem #d8d8d8;
-  --shadowBlock: 0.3rem 0.3rem 0.3rem #d8d8d8;
-  --pink-purple: -webkit-gradient(linear, left top, left  bottom , from(#ff79da), to( #9356dc));
-}
-
-.functionning-blocks .blocks:hover {
-  background: var(--primary-light);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.functionning-blocks .blocks:hover i {
-  color: var(--primary);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 /*heart fonteawesome*/
@@ -158,6 +138,21 @@ body {
           transform: scale(1.09);
 }
 
+body {
+  --font-family-text: "Roboto", sans-serif;
+  --font-family-title: "Shrikhand", cursive;
+  --primary: #9356dc;
+  --primary-light: #eed8fd;
+  --secondary: #ff79da;
+  --tertiary: #99E2D0;
+  --text-a: #333;
+  --text-b: #ffffff;
+  --background: #f2f2f2;
+  --grey-crocodile: #e5e5e5;
+  --shadow: 0 0.5rem 0.5rem #d8d8d8;
+  --pink-purple: -webkit-gradient(linear, left top, left  bottom , from(#ff79da), to( #9356dc));
+}
+
 /*menus apparition*/
 @-webkit-keyframes menus-apparition {
   0% {
@@ -182,62 +177,8 @@ body {
   }
 }
 
-/*button order, button explore*/
-button:hover {
-  opacity: 0.9;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  -webkit-box-shadow: 0 -0.5rem 0.5rem #bababa;
-          box-shadow: 0 -0.5rem 0.5rem #bababa;
-}
-
-/*check list menu*/
-@-webkit-keyframes check-circle-rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-@keyframes check-circle-rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@-webkit-keyframes check-contenair-load {
-  from {
-    width: 0rem;
-  }
-  to {
-    width: 10rem;
-  }
-}
-
-@keyframes check-contenair-load {
-  from {
-    width: 0rem;
-  }
-  to {
-    width: 10rem;
-  }
-}
-
-/*footer*/
-footer li:hover {
-  text-decoration: underline;
-}
-
 @media screen and (min-width: 640px) {
-  .new-block {
+  .new-sticker {
     right: -81%;
   }
 }
@@ -263,7 +204,7 @@ footer li:hover {
 
 .loader-contenair .loader {
   position: relative;
-  top: 46%;
+  top: 50%;
   height: 2rem;
   margin-top: -1rem;
   width: 15rem;
@@ -482,6 +423,10 @@ footer li:hover {
 }
 
 .menu-contenair ul a {
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,10 +442,9 @@ footer li:hover {
   margin-bottom: 2rem;
   width: 32rem;
   height: 7rem;
-}
-
-.menu-contenair ul a .fa-check-circle {
-  display: none;
+  overflow: hidden;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .menu-contenair ul a .food-price {
@@ -509,6 +453,12 @@ footer li:hover {
       align-self: center;
   font-weight: bold;
   padding-right: 1rem;
+}
+
+.menu-contenair ul a .food-blocks, .menu-contenair ul a h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu-contenair ul a .food-blocks {
@@ -541,60 +491,52 @@ footer li:hover {
   font-size: 1.4rem;
 }
 
-.menu-contenair ul a:hover {
-  overflow: hidden;
+.menu-contenair ul a .check-contenair {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 0rem;
+  background-color: var(--tertiary);
+  height: 7rem;
+  -webkit-transition: width 0.6s;
+  transition: width 0.6s;
 }
 
-.menu-contenair ul a:hover .food-blocks, .menu-contenair ul a:hover h4 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.menu-contenair ul a .fa-check-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .menu-contenair ul a:hover .check-contenair {
-  background-color: var(--tertiary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 10rem;
-  -webkit-animation-name: check-contenair-load;
-          animation-name: check-contenair-load;
-  animation-direction: normal, reverse;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  overflow: hidden;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
 }
 
 .menu-contenair ul a:hover .fa-check-circle {
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: var(--tertiary);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  overflow: hidden;
-  -webkit-animation-name: check-circle-rotate;
-          animation-name: check-circle-rotate;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  animation-direction: normal, reverse;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  background: transparent;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 /*index.html*/
@@ -718,6 +660,18 @@ main .functionning-contenair .blocks {
           box-shadow: var(--shadow);
 }
 
+main .functionning-contenair .blocks:hover {
+  background: var(--primary-light);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main .functionning-contenair .blocks:hover i {
+  color: var(--primary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 main .functionning-contenair h3, main .functionning-contenair i {
   padding-left: 2.5rem;
 }
@@ -772,6 +726,9 @@ main .restaurants-contenair .restaurants-cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .restaurants-contenair .restaurants-cards .heart-card {
@@ -781,21 +738,19 @@ main .restaurants-contenair .restaurants-cards .heart-card {
   right: -95%;
 }
 
-main .restaurants-contenair .restaurants-cards figure {
+main .restaurants-contenair .restaurants-cards a {
   overflow: hidden;
-  max-width: 60rem;
+  width: 60rem;
   max-height: 25rem;
   border-radius: 2rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  /*flex-grow: 1;*/
   background: white;
   margin: 2rem 2rem;
-  -webkit-box-shadow: var(--shadowBlock);
-          box-shadow: var(--shadowBlock);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
-main .restaurants-contenair .restaurants-cards figure img {
+main .restaurants-contenair .restaurants-cards a img {
   width: 100%;
   height: 18rem;
   border-radius: 2rem 2rem 0 0;
@@ -803,15 +758,15 @@ main .restaurants-contenair .restaurants-cards figure img {
      object-fit: cover;
 }
 
-main .restaurants-contenair .restaurants-cards figure h4 {
+main .restaurants-contenair .restaurants-cards a h4 {
   padding-top: 1rem;
 }
 
-main .restaurants-contenair .restaurants-cards figure span {
+main .restaurants-contenair .restaurants-cards a span {
   display: block;
 }
 
-main .restaurants-contenair .restaurants-cards figure span, main .restaurants-contenair .restaurants-cards figure h4 {
+main .restaurants-contenair .restaurants-cards a span, main .restaurants-contenair .restaurants-cards a h4 {
   margin-left: 2rem;
 }
 
@@ -860,5 +815,9 @@ footer section li i {
 
 footer section li a {
   color: var(--text-b);
+}
+
+footer section li:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
