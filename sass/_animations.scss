@@ -1,40 +1,3 @@
-.functionning-blocks{
-
-  .blocks:hover{
-  background: var(--primary-light);
-  transition: 0.4s;
-
-    i {
-      color: var(--primary);
-      transition: 0.4s;
-    }
-  }
-}
-
-/*heart fonteawesome*/
-
-.heart{
-  font-size:3rem;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 0;
-
-  :nth-child(2){
-    position: relative;
-    left:-3rem;
-    background: -webkit-gradient(linear, left top, left  bottom , from( #9356dc), to( #ff79da));
-  	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-  }
-
-    :nth-child(2):hover{
-    opacity: 1;
-    transition: 0.4s;
-    transform: scale(1.09)
-  }
-}
 
 /*menus apparition*/
 
@@ -50,44 +13,4 @@
   }
 }
 
-/*button order, button explore*/
 
-button:hover{
-  opacity: 0.9;
-  transition-duration: 0.4s;
-  box-shadow: 0 -0.5rem 0.5rem #bababa;
-}
-
-/*check list menu*/
-
-@keyframes check-circle-rotate {
-
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes check-contenair-load {
-  
-  from {
-      width: 0rem;
-  }
-
-  to {
-      width: 10rem;
-  }
-}
-
-
-/*footer*/
-
-footer{
-
-  li:hover {
-  text-decoration: underline;
-  }
-}

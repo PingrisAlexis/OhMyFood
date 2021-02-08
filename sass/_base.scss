@@ -38,9 +38,9 @@ li{
  list-style: none;
 }
 
-/*menu underline*/
+/*menus underline*/
 
-hr{
+hr {
   width: 4.5rem;
   height: 0.3rem;
   background-color: var(--tertiary);
@@ -67,9 +67,15 @@ button {
   box-shadow: var(--shadow);
 }
 
- /*"new" stickers*/
+button:hover {
+  opacity: 0.9;
+  transition-duration: 0.4s;
+  box-shadow: 0 0.5rem  0.5rem #bababa;
+}
 
-.new-block{
+/*"new" stickers*/
+
+.new-sticker {
   display:flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +90,32 @@ button {
   bottom: 25.5rem;
   right: -75%;
   
-  span{
+  span {
     font-weight: bold;
+  }
+}
+
+/*heart fonteawesome*/
+
+.heart {
+  font-size:3rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+
+  :nth-child(2) {
+    position: relative;
+    left:-3rem;
+    background: -webkit-gradient(linear, left top, left  bottom , from( #9356dc), to( #ff79da));
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+
+    :nth-child(2):hover {
+    opacity: 1;
+    transition: 0.4s;
+    transform: scale(1.09)
   }
 }
