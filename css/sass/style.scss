@@ -2,7 +2,6 @@
 @import "base";
 @import "variables";
 @import "animations";
-@import "medias";
 @import "loader";
 @import "restaurants-pages";
 
@@ -13,7 +12,6 @@ header {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 150px;
 
   h1 {
     padding: 2rem;
@@ -26,34 +24,55 @@ header {
     }
   }
   
-  .where {
+  .location {
+    background: #e5e5e5;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    background: #e5e5e5;
     box-shadow: var(--shadow);
+    padding: 2rem;
+    text-align: center;
 
-    .fa-map-marker-alt {
-      font-size: 3rem;
-      padding-right:1rem;
-    }
+    .search-bar {
+      padding-left:2rem;
 
-    span {
-      position:relative;
-      font-size: 2rem;
-      font-weight: 700;
-      padding-left:1rem;
+      input {
+        width: 17rem;
+        outline-style: none;
+        border: none;
+        background: #e5e5e5;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      input::placeholder { 
+        color: #333;
+      }
+
+      .fa-map-marker-alt {
+        font-size: 3rem;
+        padding-right:1rem;
+      }
+
+      span {
+        position:relative;
+        font-size: 2rem;
+        font-weight: 700;
+        padding-left:1rem;
+      }
     }
-  }
+  } 
 }
+
 main {
   
   .teaser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 250px;
     width: 100%;
     padding-top: 3rem;
-    text-align: center;
     background: var(--background);
 
     h2 {
@@ -63,8 +82,13 @@ main {
     h3 {
       font-size: 1.8rem;
       font-weight: 300;
-    }   
+    }
+    
+    a {
+      padding-top:1.5rem;
+    }
   }
+
   .functionning-contenair {
 
     h2 {
@@ -108,15 +132,14 @@ main {
         }
       }
 
-    h3,i {
+    h3,
+    i {
         padding-left: 2.5rem;
     }
 
     i {
         font-size: 2rem;
     } 
-
-
 
     .circle {
       width: 30px;
@@ -178,10 +201,15 @@ main {
         width: 60rem;
         max-height: 25rem;
         border-radius: 2rem;
-        /*flex-grow: 1;*/
         background: white;
         margin: 2rem 2rem;
         box-shadow: var(--shadow);
+
+        h3 {
+          font-size: 1.6rem;
+          padding-left: 2rem;
+          padding-top: 1rem;
+        }
 
         img {
           width: 100%;
@@ -190,15 +218,12 @@ main {
           object-fit: cover;
         }
 
-        h4{
-          padding-top: 1rem;
-        }
-
-        span{
+        span {
           display:block;
         } 
 
-        span,h4 {
+        span,
+        h4 {
          margin-left:2rem;
         }     
       }  
@@ -209,43 +234,57 @@ main {
 footer {
   background:#333;
   color: var(--text-b);
-  height: 200px;
+  height: auto;
   width: 100%;
+  display:flex;
+  align-items: center;
 
-  section {
+   ul {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    text-align: start;
+    flex-flow: column wrap;
+    justify-content: space-around;
     margin-left: 10%;
-    padding: 0;
 
     h4 {
-      padding:2rem  0rem;
       font-family: var(--font-family-title);
       font-size: 2rem;
       font-weight: 300;
     }
-      
-
-    li {
-      padding-left: 0rem;
-      cursor: pointer;
-      margin: 1rem 0rem;
-      padding-right: 0rem;
-      width: max-content;
-
-      i {
-        margin-right:1rem;
-      }
-
-      a {
-        color: var(--text-b);       
-      }
+    
+    i {
+      margin-right:1rem;
     }
 
-    li:hover {
+    a {
+      display: block;
+      color: var(--text-b);
+      width: max-content;
+      margin:1rem 0rem;
+    }
+
+    a:hover {
       text-decoration: underline;
-      }
+      overflow: hidden;
+    }  
+  }
+} 
+
+@media screen and (min-width: 640px) {
+  
+  .new-sticker {
+    right:-81%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  footer {
+    height: 8rem;
+
+    ul {
+     flex-flow:row wrap;
+     margin-left: 0;
+   }
   }
 }
