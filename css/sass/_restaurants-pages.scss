@@ -1,38 +1,30 @@
 
-.restaurants-top-page {  
+/*RESTAURANTS PAGES*/
 
-  nav {
-    display:flex;
-    flex-flow:row-reverse wrap;
-    justify-content: center;
-    padding-right:2.6rem;
-    background: #fff;
+/*HEADER*/
 
-    h1 {
-      padding: 2rem;
-      text-align: center;
-      margin: 0;
-  
-      img {
-        padding-top: 1rem;
-        width: 20rem;
-      }
-    }
-
-    a {
-      align-self: center;
-      font-size: 3rem;
-      justify-content: flex-end;
-    }
-  }
-
-  .teaser-picture {
-    height: 50vh;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
+nav {
+  display:flex;
+  flex-flow:row-reverse wrap;
+  justify-content: center;
+  padding-right:2.6rem;
+  background: #fff;
+    
+  a {
+    align-self: center;
+    font-size: 3rem;
+    justify-content: flex-end;
   }
 }
+
+.teaser-picture {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*MAIN*/
 
 .restaurants-mid-page {
   background: var(--background);
@@ -40,60 +32,38 @@
   max-width: 140rem;
   margin: auto;
   margin-top: -4vh;
-    
-  .mid-page-title {
+   
+  header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
  
-    .heart {
-      margin-left:5rem;
-      cursor: pointer;
-    }
-  
     h2 {  
     font-family: var(--font-family-title);
     font-weight: 300;
     border-radius: 3rem 3rem;
     }
-  }
-  
-  .btn-order {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
+    
+    .heart {
+      margin-left:5rem;
+      cursor: pointer;
+    }
   }
 }
+
+.btn-order {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
     
 .menu-contenair {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   background: var(--background);
-
-  .entrances-contenair,
-  .dishes-contenair,
-  .desserts-contenair {
-    visibility: hidden;
-    animation-name: menus-appearance;
-    animation-timing-function: linear;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-    padding:0rem 1rem;
-  }
-
-  .dishes-contenair {
-    animation-delay: 0.5s;
-  }
-
-  .desserts-contenair {
-    animation-delay: 1s;
-  }
-
-  h3 {
-    font-weight: 300;
-  }
   
   ul {
     display: flex;
@@ -102,79 +72,27 @@
     margin: auto;
     flex-grow: 1;
     padding-bottom: 5rem;
+  }
   
-    li {
-      transition-property: width;
-      transition-duration: 2s;
-      display: flex;
-      flex-flow: nowrap;
-      justify-content:space-between;
-      background: #fff;
-      border-radius: 2rem;
-      margin:2rem 0rem;
-      padding-left: 2rem;
-      margin-bottom: 2rem;
-      width: 32rem;
-      height: 7rem;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      cursor: pointer;
- 
-      .food-price {
-        align-self: center;
-        font-weight: bold;
-        padding-right: 1rem;         
-      }
-
-      .food-blocks, 
-      h4 {      
-        text-overflow:ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-
-      .food-blocks {
-        height: 7rem;
-        width: 32rem;
-        display: flex;
-        flex-flow: row nowrap;
-        align-self: center;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 2rem;
-        background: #fff;
-                      
-        h4 {
-          font-size: 1.5rem;
-            
-          span {
-            font-size: 1.4rem;
-          }
-        }                           
-      }
-
-      .check-contenair {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 0rem;
-        background-color: var(--tertiary);
-        height: 7rem;
-        transition: width 0.6s;
-      }
-
-      .fa-check-circle {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-        transition:transform 0.6s;  
-        font-size: 2rem;       
-        color: #fff;
-      }
-    }
+  li {
+    transition-property: width;
+    transition-duration: 2s;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content:space-between;
+    background: #fff;
+    border-radius: 2rem;
+    margin:2rem 0rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    width: 32rem;
+    height: 7rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer; 
+  }
   
-    li:hover {
+  li:hover {
        
       .check-contenair {  
         width: 10rem;            
@@ -184,5 +102,80 @@
         transform: rotate(360deg);
       }           
     }
+    
+  h3 {
+    font-weight: 300;
   }
+}  
+  
+.entrances-contenair,
+.dishes-contenair,
+.desserts-contenair {
+  visibility: hidden;
+  animation-name: menus-appearance;
+  animation-timing-function: linear;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  padding:0rem 1rem;
+}
+
+.dishes-contenair {
+  animation-delay: 0.5s;
+}
+
+.desserts-contenair {
+  animation-delay: 1s;
+}
+
+.food-blocks {
+  height: 7rem;
+  width: 32rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  background: #fff;
+                      
+  h4 {
+    font-size: 1.5rem;
+            
+    span {
+      font-size: 1.4rem;
+    }
+  }
+}
+  
+.food-blocks, 
+h4 {      
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+      
+.food-price {
+  align-self: center;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+  
+.check-contenair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0rem;
+  background-color: var(--tertiary);
+  height: 7rem;
+  transition: width 0.6s;
+}
+  
+.fa-check-circle {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  transition:transform 0.6s;  
+  font-size: 2rem;       
+  color: #fff;
 }

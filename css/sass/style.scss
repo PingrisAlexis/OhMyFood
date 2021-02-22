@@ -1,11 +1,12 @@
+
 @import "reset";
-@import "base";
-@import "variables";
 @import "animations";
 @import "loader";
+@import "base";
+@import "variables";
 @import "restaurants-pages";
 
-/*index.html*/
+/*HEADER*/
 
 header {
   display: flex;
@@ -23,57 +24,55 @@ header {
       width: 20rem;
     }
   }
-  
-  .location {
-    background: #e5e5e5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--shadow);
-    padding: 2rem;
-    text-align: center;
-
-    .search-bar {
-      padding-left:2rem;
-
-      input {
-        width: 17rem;
-        outline-style: none;
-        border: none;
-        background: #e5e5e5;
-        font-size: 2rem;
-        font-weight: bold;
-      }
-
-      input::placeholder { 
-        color: #333;
-      }
-
-      .fa-map-marker-alt {
-        font-size: 3rem;
-        padding-right:1rem;
-      }
-
-      span {
-        position:relative;
-        font-size: 2rem;
-        font-weight: 700;
-        padding-left:1rem;
-      }
-    }
-  } 
 }
 
-main {
-  
-  .teaser {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 250px;
-    width: 100%;
-    padding-top: 3rem;
-    background: var(--background);
+.location {
+  background: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+}
+
+.search-bar {
+  padding-left:2rem;
+
+  input {
+    width: 17rem;
+    outline-style: none;
+    border: none;
+    background: #e5e5e5;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  input::placeholder { 
+    color: #333;
+  }
+
+  .fa-map-marker-alt {
+    font-size: 3rem;
+    padding-right:1rem;
+  }
+
+  span {
+    position:relative;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-left:1rem;
+  }
+}
+
+.teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px;
+  width: 100%;
+  padding-top: 3rem;
+  background: var(--background);
 
     h2 {
       font-weight: 900;
@@ -87,149 +86,151 @@ main {
     a {
       padding-top:1.5rem;
     }
-  }
+}
 
-  .functionning-contenair {
+/*MAIN*/
+
+.functionning-contenair {
 
     h2 {
       align-items: center;
       text-align: center;
     }
+}
 
-    .functionning-blocks {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      align-content: space-around;
-      align-items: center;
-      padding: 2rem;
-      flex-grow:1;
-      margin:0rem 2rem;
+.functionning-blocks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  flex-grow:1;
+  margin:0rem 2rem;
+  
+  h3,
+  i {
+    padding-left: 2.5rem;
     }
 
-    .blocks {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      background: var(--background);
-      margin-bottom: 2rem;
-      min-width: 33rem;
-      height: 6rem;
-      border: none;
-      border-radius: 2rem;
-      text-align: center;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-    }
-
-    .blocks:hover {
-      background: var(--primary-light);
-      transition: 0.4s;
-    
-        i {
-          color: var(--primary);
-          transition: 0.4s;
-        }
-      }
-
-    h3,
-    i {
-        padding-left: 2.5rem;
-    }
-
-    i {
-        font-size: 2rem;
-    } 
-
-    .circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 20px;
-      background: var(--primary);
-      color: var(--text-b);
-      position: relative;
-      left: -1rem;
-      vertical-align: center;
-      font-size: 2.2rem;
-    }
-
-    .choose {
-      h3 {
-        margin-left: 1rem;
-      }
-    }
-
-    .compose {
-      h3 {
-        margin-left: 0.4rem;
-      }
-    }
-
-    .taste {
-      h3 {
-        padding-right: 0.3rem;
-      }
-    }
-  }
-
-  .restaurants-contenair {
-    background: var(--background);
-    height: auto;
-    padding-bottom: 50px;
-
-    h2 {
-      text-align:center;
-
-    }
-
-    .restaurants-cards {
-      height: auto;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
-      
-      .heart-card {
-        position: relative;
-        bottom: 3.5rem;
-        border: 0rem;
-        right: -95%;
-      }
-
-      a {
-        overflow: hidden;
-        width: 60rem;
-        max-height: 25rem;
-        border-radius: 2rem;
-        background: white;
-        margin: 2rem 2rem;
-        box-shadow: var(--shadow);
-
-        h3 {
-          font-size: 1.6rem;
-          padding-left: 2rem;
-          padding-top: 1rem;
-        }
-
-        img {
-          width: 100%;
-          height: 18rem;
-          border-radius: 2rem 2rem 0 0;
-          object-fit: cover;
-        }
-
-        span {
-          display:block;
-        } 
-
-        span,
-        h4 {
-         margin-left:2rem;
-        }     
-      }  
-    }
+  i {
+    font-size: 2rem;
   }
 }
+
+.blocks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--background);
+  margin-bottom: 2rem;
+  min-width: 33rem;
+  height: 6rem;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.blocks:hover {
+  background: var(--primary-light);
+  transition: 0.4s;
+    
+  i {
+    color: var(--primary);
+    transition: 0.4s;
+  }
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: var(--text-b);
+  position: relative;
+  left: -1rem;
+  vertical-align: center;
+  font-size: 2.2rem;
+}
+
+.choose {
+  h3 {
+    margin-left: 1rem;
+  }
+}
+
+.compose {
+  h3 {
+    margin-left: 0.4rem;
+  }
+}
+
+.taste {
+  h3 {
+    padding-right: 0.3rem;
+  }
+}
+
+.restaurants-contenair {
+  background: var(--background);
+  height: auto;
+  padding-bottom: 50px;
+
+  h2 {
+    text-align:center;
+  }
+}
+
+.restaurants-cards {
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    overflow: hidden;
+    width: 60rem;
+    max-height: 25rem;
+    border-radius: 2rem;
+    background: white;
+    margin: 2rem 2rem;
+    box-shadow: var(--shadow);
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 18rem;
+    border-radius: 2rem 2rem 0 0;
+    object-fit: cover;
+  }
+
+  span {
+    display:block;
+  } 
+
+  span,
+  h4 {
+    margin-left:2rem;
+  }           
+}
+
+.heart-card {
+  position: relative;
+  bottom: 3.5rem;
+  border: 0rem;
+  right: -95%;
+}
+
+/*FOOTER*/
 
 footer {
   background:#333;
@@ -237,38 +238,40 @@ footer {
   height: auto;
   width: 100%;
   display:flex;
-  align-items: center;
+  align-items: center; 
 
-   ul {
+  ul {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     margin-left: 10%;
-
-    h4 {
-      font-family: var(--font-family-title);
-      font-size: 2rem;
-      font-weight: 300;
-    }
-    
-    i {
-      margin-right:1rem;
-    }
-
-    a {
-      display: block;
-      color: var(--text-b);
-      width: max-content;
-      margin:1rem 0rem;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      overflow: hidden;
-    }  
   }
-} 
+
+  h4 {
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  i {
+    padding-right:1rem;
+  }
+
+  a {
+    display: block;
+    color: var(--text-b);
+    width: max-content;
+    margin:1rem 0rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    overflow: hidden;
+  }
+}
+
+/*MEDIAS QUERIES*/
 
 @media screen and (min-width: 640px) {
   
