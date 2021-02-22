@@ -30,7 +30,7 @@
 
 - Home mock-up (mobile resolution):
 
-![Ohmyfood! Home mock-up (mobile resolution)](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/src/mock-ups/Accueil.png)
+![Ohmyfood! Home mock-up (mobile resolution)](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/img/mock-ups/Accueil.png)
 
 - Restaurants mock-up (mobile resolution):
 
