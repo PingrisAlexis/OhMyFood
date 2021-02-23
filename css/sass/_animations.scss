@@ -1,4 +1,28 @@
 
+/*LOADER*/
+
+@keyframes bounce {
+  
+  from {
+    transform: translateY(0);
+  }
+  
+  to {
+    transform: translateY(-2rem); 
+  }
+}
+  
+@keyframes loading {
+  
+  0% {
+    visibility: visible;
+  }
+  
+  100% {
+    visibility: hidden;
+  }
+}
+
 /*RESTAURANTS MENUS APPEARANCE*/
 
 @keyframes menus-appearance {
@@ -12,4 +36,3 @@
     visibility: visible;
   }
 }
-
