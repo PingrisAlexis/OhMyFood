@@ -20,7 +20,7 @@
 
 - The font for the text is "Roboto", for the logo and the title the font is "Shrikhand".
 
-- The icons comes from Fonte Awesome.
+- The icons comes from Font Awesome.
 
 - The colours used are: purple #9356DC; pink #FF79DA; green #99E2D0.
 
