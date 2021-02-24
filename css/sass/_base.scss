@@ -38,13 +38,93 @@ li {
  list-style: none;
 }
 
+nav,
+.restaurants-mid-page header,
+.btn-order,
+.menu-contenair,
+.menu-contenair ul,
+.menu-contenair li,
+.food-blocks,
+.check-contenair,
+.fa-check-circle,
+header,
+.location,
+.teaser,
+.functionning-blocks,
+.blocks,
+.restaurants-cards,
+footer,
+footer ul,
+.loader,
+.heart,
+.new-sticker {
+  display: flex;
+}
+
+.menu-contenair,
+.functionning-blocks,
+.restaurants-cards {
+  flex-flow: row wrap;
+}
+
+.restaurants-mid-page header,
+.menu-contenair li,
+.food-blocks,
+.loader {
+  flex-direction: row;
+}
+
+nav,
+header,
+.btn-order,
+.check-contenair,
+.fa-check-circle,
+.location,
+.restaurants-cards,
+.new-sticker,
+.heart {
+  justify-content: center;
+}
+
+.menu-contenair,
+.functionning-blocks,
+footer ul {
+  justify-content: space-around;
+}
+
+.food-blocks,
+.check-contenair,
+.location,
+.teaser,
+.functionning-contenair h2,
+.functionning-blocks,
+.blocks,
+.restaurants-cards,
+footer,
+.new-sticker,
+.heart {
+  align-items: center;  
+}
+
+
+.restaurants-mid-page header,
+header,
+header h1,
+.location,
+.functionning-contenair h2,
+.blocks,
+.restaurants-contenair h2,
+.new-sticker {
+  text-align: center;
+}
+
 /*RESTAURANTS MENUS UNDERLINE*/
 
 hr {
   width: 4.5rem;
   height: 0.3rem;
   background-color: var(--tertiary);
-  border-color:var(--tertiary);
+  border-color: var(--tertiary);
   border-style: none;
 }
 
@@ -78,33 +158,25 @@ button:hover,
 /*"NEW" STICKERS*/
 
 .new-sticker {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
   width: 8rem;
   height: 3rem;
   background: var(--tertiary);
-  text-align: center;
   color: #269b7e;
   border-radius: 0.5rem;  
   position: relative;
-  bottom: 25.5rem;
+  bottom: 25rem;
   right: -75%;
 }
 
-/*HEARTS FONTE AWESOME*/
+/*HEARTS FONT AWESOME*/
 
 .heart {
   font-size:3rem;
-  display:flex;
-  justify-content: center;
-  align-items: center;
   width: 0;
 
   :nth-child(2) {
     position: relative;
-    left:-3rem;
+    left: -3rem;
     background: -webkit-gradient(linear, left top, left  bottom , from( #9356dc), to( #ff79da));
   	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,3 +189,4 @@ button:hover,
     transform: scale(1.09)
   }
 }
+
