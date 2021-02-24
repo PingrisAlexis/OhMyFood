@@ -1,39 +1,27 @@
 
-@import "reset";
 @import "animations";
-@import "loader";
-@import "base";
+@import "reset";
 @import "variables";
+@import "base";
+@import "loader";
 @import "restaurants-pages";
 
 /*HEADER*/
 
 header {
-  display: flex;
   flex-direction: column;
-  text-align: center;
   width: 100%;
 
   h1 {
     padding: 2rem;
-    text-align: center;
     margin: 0;
-
-    img {
-      padding-top: 1rem;
-      width: 20rem;
-    }
   }
 }
 
 .location {
   background: #e5e5e5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: var(--shadow);
   padding: 2rem;
-  text-align: center;
 }
 
 .search-bar {
@@ -54,21 +42,19 @@ header {
 
   .fa-map-marker-alt {
     font-size: 3rem;
-    padding-right:1rem;
+    padding-right: 1rem;
   }
 
   span {
     position:relative;
     font-size: 2rem;
     font-weight: 700;
-    padding-left:1rem;
+    padding-left: 1rem;
   }
 }
 
 .teaser {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 250px;
   width: 100%;
   padding-top: 3rem;
@@ -84,31 +70,19 @@ header {
     }
     
     a {
-      padding-top:1.5rem;
+      padding-top: 1.5rem;
     }
 }
 
 /*MAIN*/
 
-.functionning-contenair {
-
-    h2 {
-      align-items: center;
-      text-align: center;
-    }
-}
-
 .functionning-blocks {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
   align-content: space-around;
-  align-items: center;
   padding: 2rem;
-  flex-grow:1;
-  margin:0rem 2rem;
+  flex-grow: 1;
+  margin: 0rem 2rem;
   
-  h3,
+  strong,
   i {
     padding-left: 2.5rem;
     }
@@ -119,16 +93,13 @@ header {
 }
 
 .blocks {
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
   background: var(--background);
   margin-bottom: 2rem;
   min-width: 33rem;
   height: 6rem;
   border: none;
   border-radius: 2rem;
-  text-align: center;
   cursor: pointer;
   box-shadow: var(--shadow);
 }
@@ -156,19 +127,19 @@ header {
 }
 
 .choose {
-  h3 {
-    margin-left: 1rem;
+  strong {
+    margin-left: 1.1rem;
   }
 }
 
 .compose {
-  h3 {
+  strong {
     margin-left: 0.4rem;
   }
 }
 
 .taste {
-  h3 {
+  strong {
     padding-right: 0.3rem;
   }
 }
@@ -177,18 +148,10 @@ header {
   background: var(--background);
   height: auto;
   padding-bottom: 50px;
-
-  h2 {
-    text-align:center;
-  }
 }
 
 .restaurants-cards {
   height: auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 
   a {
     overflow: hidden;
@@ -214,12 +177,12 @@ header {
   }
 
   span {
-    display:block;
+    display: block;
   } 
 
   span,
   h4 {
-    margin-left:2rem;
+    margin-left: 2rem;
   }           
 }
 
@@ -237,14 +200,10 @@ footer {
   color: var(--text-b);
   height: auto;
   width: 100%;
-  display:flex;
-  align-items: center; 
 
   ul {
     width: 100%;
-    display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
     margin-left: 10%;
   }
 
@@ -255,14 +214,14 @@ footer {
   }
 
   i {
-    padding-right:1rem;
+    padding-right: 1rem;
   }
 
   a {
     display: block;
     color: var(--text-b);
     width: max-content;
-    margin:1rem 0rem;
+    margin: 1rem 0rem;
   }
 
   a:hover {
@@ -276,7 +235,7 @@ footer {
 @media screen and (min-width: 640px) {
   
   .new-sticker {
-    right:-81%;
+    right: -81%;
   }
 }
 
@@ -286,7 +245,7 @@ footer {
     height: 8rem;
 
     ul {
-     flex-flow:row wrap;
+     flex-flow: row wrap;
      margin-left: 0;
    }
   }
