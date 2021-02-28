@@ -34,7 +34,7 @@
 
 - Restaurants mock-up (mobile resolution):
 
-![Ohmyfood! Restaurants  mock-up (mobile resolution)](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/src/mock-ups/Menu%20-%20La%20note%20enchant%C3%A9e.png)
+![Ohmyfood! Restaurants  mock-up (mobile resolution)](https://github.com/PingrisAlexis/PingrisAlexis_03_25012021/blob/master/img/mock-ups/Menu%20-%20La%20note%20enchant%C3%A9e.png)
 
 ### Skills assessed:
 
