@@ -1,6 +1,6 @@
-# OhMyFood
+# Project 2/6 - Web Developer Path
 
-## Project 2/6 - Web Developer Path - Make a website dynamic with CSS animations.
+## Make a website dynamic with CSS animations.
 
 ### Specifications:
 
