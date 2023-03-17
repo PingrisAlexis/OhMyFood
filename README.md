@@ -1,6 +1,6 @@
 # OhMyFood
 
-## Project 3 OpenClassrooms - Make a website dynamic with CSS animations.
+## Project 2/6 - Web Developer Path - Make a website dynamic with CSS animations.
 
 ### Specifications:
 
