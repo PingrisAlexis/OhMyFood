@@ -1,4 +1,4 @@
-# PingrisAlexis_03_12122020
+# OhMyFood
 
 ## Project 3 OpenClassrooms - Make a website dynamic with CSS animations.
 
